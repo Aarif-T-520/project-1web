@@ -1,0 +1,435 @@
+<html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CustomStitch by Arif Tyagi</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+
+    <!-- 1. HEADER & NAVIGATION BAR -->
+    <header class="header">
+        <div class="logo">
+            <h2>CustomStitch</h2>
+        </div>
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#categories">Clothes Collection</a>
+            <a href="#tailors">Master Tailors</a>
+            <a href="#booking">Measurement Booking</a>
+            <a href="#help">Help & Support</a>
+        </nav>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-circle-photo">
+                <img src="WhatsApp Image 2026-10-21 at 10.16.55 PM.jpeg" alt="Arif Tyagi">
+            </div>
+            <h2 class="shop-owner">Arif Tyagi</h2>
+            <h1>Aapka Kapda, Aapka Size, Aapka Design</h1>
+            <p>Perfect Fitting Custom Tailoring & E-Commerce Service</p>
+            <a href="#categories" class="btn">Explore Clothes Collection</a>
+        </div>
+    </section>
+
+    <!-- 3. 5 CLOTHING CATEGORIES -->
+    <section id="categories" class="section">
+        <h2 class="section-title">Our Clothes Collection</h2>
+        <p class="section-sub">Aap kya silwana chahte hain? Category choose karein:</p>
+        
+        <div class="category-grid">
+            <div class="cat-card" onclick="openCategoryFlow('Gents Formal (Shirt & Pant)', 'gents')">
+                <img src="paint-shirt.png" alt="Gents">
+                <h3>Gents Formal (Shirt & Pant)</h3>
+            </div>
+            <div class="cat-card" onclick="openCategoryFlow('Coat, Blazer & Jodhpuri', 'coat')">
+                <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&q=80" alt="Coat">
+                <h3>Coat, Blazer & Jodhpuri</h3>
+            </div>
+            <div class="cat-card" onclick="openCategoryFlow('Ladies Wear (Suit, Salwar & Kurti)', 'ladies')">
+                <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=400&q=80" alt="Ladies">
+                <h3>Ladies Wear (Suit & Kurti)</h3>
+            </div>
+            <div class="cat-card" onclick="openCategoryFlow('Gents Kurta Pajama', 'kurta')">
+                <img src="kurta pajama.png" alt="Kurta">
+                <h3>Gents Kurta Pajama</h3>
+            </div>
+            <div class="cat-card" onclick="openCategoryFlow('Kids ', 'kids')">
+                <img src="baby1.png" alt="Kids">
+                <h3>Kids paint-shirt</h3>
+            </div>
+            <div class="cat-card" onclick="openCategoryFlow('Kids & Student Uniforms', 'kids')">
+                <img src="Screenshot (139).png" alt="Kids">
+                <h3>Kids & Uniforms</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. FABRIC CHOICE FLOW -->
+    <section id="selection-flow" class="section bg-light" style="display:none;">
+        <h2 class="section-title" id="selectedCategoryTitle">Selected Outfit Choice</h2>
+        
+        <div class="flow-container">
+            <h3>Kapda Kiska Hoga?</h3>
+            <div class="flow-options">
+                <button type="button" class="btn btn-choice" onclick="selectFabricSource('Customer Fabric')">
+                    <strong>1. Customer Ka Apna Kapda</strong><br><small>(Sirf Silai Charge)</small>
+                </button>
+                <button type="button" class="btn btn-choice" onclick="selectFabricSource('Shop Fabric')">
+                    <strong>2. Dukaan Ka Kapda + Silai</strong><br><small>(Colors, Fabric & Design Choice)</small>
+                </button>
+            </div>
+
+            <!-- Customer Fabric Options -->
+            <div id="customerFabricBox" class="sub-option-box" style="display:none;">
+                <h4>Aap Kya Silwana Chahte Hain?</h4>
+                <div class="item-buttons" id="customerItemButtons"></div>
+            </div>
+
+            <!-- Shop Fabric Options -->
+            <div id="shopFabricBox" class="sub-option-box" style="display:none;">
+                <h4>Select Fabric, Color & Design:</h4>
+                <div class="fabric-grid" id="shopFabricCards"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. 4 MASTER TAILORS IN 1 ROW -->
+    <section id="tailors" class="section">
+        <h2 class="section-title">Our 4 Expert Master Tailors</h2>
+        <p class="section-sub">Har specialty ke alag artisans</p>
+
+        <div class="tailor-grid-4">
+            <div class="tailor-card">
+                <img src="aarif tailor.jpeg" alt="Ramesh">
+                <div class="tailor-body">
+                    <h4>Master Aarif</h4>
+                    <p class="tailor-tag">Pant & Shirt or kurta_pajama Specialist</p>
+                </div>
+            </div>
+            <div class="tailor-card">
+                <img src="prince tailor.jpeg" alt="Aslam">
+                <div class="tailor-body">
+                    <h4>Master Prince</h4>
+                    <p class="tailor-tag">Coat & Suit Specialist</p>
+                </div>
+            </div>
+            <div class="tailor-card">
+                <img src="ladis.jpeg" alt="Sunita">
+                <div class="tailor-body">
+                    <h4>Sunita Devi</h4>
+                    <p class="tailor-tag">Ladies Suit Specialist</p>
+                </div>
+            </div>
+            <div class="tailor-card">
+                <img src="vivak tailor.jpeg" alt="Suresh">
+                <div class="tailor-body">
+                    <h4>Master vivak</h4>
+                    <p class="tailor-tag">Kids & Uniform Specialist</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. DYNAMIC MEASUREMENT FORM -->
+    <section id="booking" class="section bg-light">
+        <h2 class="section-title">Custom Measurement Form</h2>
+        <p class="section-sub">Inches mein sahi naap bhariye:</p>
+
+        <form class="booking-form" onsubmit="alert('Aapka Order Book ho gaya hai!'); return false;">
+            
+            <div class="form-group row">
+                <div>
+                    <label>Selected Outfit:</label>
+                    <input type="text" id="formOutfit" readonly placeholder="Choose Outfit">
+                </div>
+                <div>
+                    <label>Fabric Source:</label>
+                    <input type="text" id="formFabricType" readonly placeholder="Customer/Shop">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Pricing Detail:</label>
+                <input type="text" id="formPrice" readonly placeholder="Price breakdown">
+            </div>
+
+            <div class="form-group row">
+                <div>
+                    <label>Full Name:</label>
+                    <input type="text" required placeholder="Aapka Naam">
+                </div>
+                <div>
+                    <label>Mobile / WhatsApp:</label>
+                    <input type="tel" required placeholder="10-digit Mobile Number">
+                </div>
+            </div>
+
+            <!-- DYNAMIC MEASUREMENT FIELDS CONTAINER -->
+            <h3 class="form-subtitle">Naap Ki Jankari (Measurements in Inches)</h3>
+            <div id="dynamicMeasurementFields">
+                <!-- Javascript will render item-specific inputs here -->
+            </div>
+
+            <div class="form-group" style="margin-top: 15px;">
+                <label>Special Design Notes & Full Delivery Address:</label>
+                <textarea rows="3" required placeholder="Ghar ka address aur agar koi special pocket/cut design chahiye toh yahan likhein"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-block btn-lg">Confirm Order Booking</button>
+        </form>
+    </section>
+
+    <!-- 7. HELP & FOOTER -->
+    <section id="help" class="section">
+        <h2 class="section-title">Help & Support</h2>
+        <div class="help-box">
+            <p><strong>📞 Call / WhatsApp:</strong> +91 9012160561</p>
+            <p><strong><bold>@  </bold>Gmail:</strong> aarif.light1234567@gmail.com</p>
+            <p><strong>📍 Shop Address:</strong> Main Market Basaud, Baghpat, Uttar Pradesh (250601)</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 CustomStitch (Managed by Arif Tyagi). All Rights Reserved.</p>
+    </footer>
+
+    <!-- INTERACTIVE DYNAMIC SCRIPT -->
+    <script>
+        let currentCat = '';
+        let currentType = '';
+
+        function openCategoryFlow(catName, type) {
+            currentCat = catName;
+            currentType = type;
+            document.getElementById('selection-flow').style.display = 'block';
+            document.getElementById('selectedCategoryTitle').innerText = 'Selected: ' + catName;
+            document.getElementById('customerFabricBox').style.display = 'none';
+            document.getElementById('shopFabricBox').style.display = 'none';
+            document.getElementById('selection-flow').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function selectFabricSource(sourceType) {
+            document.getElementById('formFabricType').value = sourceType;
+            if (sourceType === 'Customer Fabric') {
+                document.getElementById('customerFabricBox').style.display = 'block';
+                document.getElementById('shopFabricBox').style.display = 'none';
+                renderCustomerOptions();
+            } else {
+                document.getElementById('shopFabricBox').style.display = 'block';
+                document.getElementById('customerFabricBox').style.display = 'none';
+                renderShopFabricOptions();
+            }
+        }
+
+        function renderCustomerOptions() {
+            let container = document.getElementById('customerItemButtons');
+            if (currentType === 'gents') {
+                container.innerHTML = `
+                    <button type="button" class="btn btn-outline" onclick="finalizeBooking('Gents Shirt (Customer Fabric)', 'Customer Fabric', 'Silai Charge: ₹400', 'shirt')">Sirf Shirt (Silai: ₹400)</button>
+                    <button type="button" class="btn btn-outline" onclick="finalizeBooking('Gents Pant (Customer Fabric)', 'Customer Fabric', 'Silai Charge: ₹500', 'pant')">Sirf Pant (Silai: ₹500)</button>
+                    <button type="button" class="btn btn-outline" onclick="finalizeBooking('Shirt + Pant Both (Customer Fabric)', 'Customer Fabric', 'Silai Charge: ₹850', 'shirt_and_pant')">Shirt + Pant Both (Silai: ₹850)</button>
+                `;
+            } else if (currentType === 'coat') {
+                container.innerHTML = `
+                    <button type="button" class="btn btn-outline" onclick="finalizeBooking('Jodhpuri Coat Set (Customer Fabric)', 'Customer Fabric', 'Silai Charge: ₹1,800', 'jodhpuri')">Jodhpuri Coat & Pant (Silai: ₹1,800)</button>
+                    <button type="button" class="btn btn-outline" onclick="finalizeBooking('2-Piece Blazer Suit (Customer Fabric)', 'Customer Fabric', 'Silai Charge: ₹2,200', 'blazer_suit')">2-Piece Blazer Suit (Silai: ₹2,200)</button>
+                `;
+            } else if (currentType === 'ladies') {
+                container.innerHTML = `
+                    <button type="button" class="btn btn-outline" onclick="finalizeBooking('Ladies Kurti (Customer Fabric)', 'Customer Fabric', 'Silai Charge: ₹350', 'ladies_kurti')">Sirf Kurti (Silai: ₹350)</button>
+                    <button type="button" class="btn btn-outline" onclick="finalizeBooking('Ladies Suit & Salwar Set (Customer Fabric)', 'Customer Fabric', 'Silai Charge: ₹650', 'ladies_suit')">Suit + Salwar Complete (Silai: ₹650)</button>
+                `;
+            } else if (currentType === 'kurta') {
+                container.innerHTML = `
+                    <button type="button" class="btn btn-outline" onclick="finalizeBooking('Gents Kurta Pajama (Customer Fabric)', 'Customer Fabric', 'Silai Charge: ₹550', 'kurta_pajama')">Kurta + Pajama Both (Silai: ₹550)</button>
+                `;
+            } else {
+                container.innerHTML = `
+                    <button type="button" class="btn btn-outline" onclick="finalizeBooking('Kids Pant & Shirt (Customer Fabric)', 'Customer Fabric', 'Silai Charge: ₹350', 'kids_pant_shirt')">Kids Pant & Shirt (Silai: ₹350)</button>
+                    <button type="button" class="btn btn-outline" onclick="finalizeBooking('Kids Kurta Pajama (Customer Fabric)', 'Customer Fabric', 'Silai Charge: ₹300', 'kids_kurta')">Kids Kurta Pajama (Silai: ₹300)</button>
+                `;
+            }
+        }
+
+        function renderShopFabricOptions() {
+            let container = document.getElementById('shopFabricCards');
+            if (currentType === 'gents') {
+                container.innerHTML = `
+                    <div class="fabric-card" onclick="finalizeBooking('Gents Pure Cotton Shirt & Pant Set', 'Shop Fabric', 'Fabric: ₹700 + Silai: ₹800 = Total ₹1,500', 'shirt_and_pant')">
+                        <h5>Navy Blue Cotton Formal Set</h5>
+                        <p>Colors: Navy Blue, White, Black | Plain/Striped</p>
+                        <p class="price-tag">Kapda: ₹700 | Silai: ₹800</p>
+                        <p class="total-tag">Total: ₹1,500</p>
+                    </div>
+                `;
+            } else if (currentType === 'coat') {
+                container.innerHTML = `
+                    <div class="fabric-card" onclick="finalizeBooking('Royal Velvet Jodhpuri Suit Set', 'Shop Fabric', 'Fabric: ₹2,000 + Silai: ₹1,800 = Total ₹3,800', 'jodhpuri')">
+                        <h5>Royal Velvet Jodhpuri Coat & Pant</h5>
+                        <p>Colors: Royal Blue, Maroon, Emerald Green</p>
+                        <p class="price-tag">Kapda: ₹2,000 | Silai: ₹1,800</p>
+                        <p class="total-tag">Total: ₹3,800</p>
+                    </div>
+                `;
+            } else if (currentType === 'ladies') {
+                container.innerHTML = `
+                    <div class="fabric-card" onclick="finalizeBooking('Designer Georgette Suit & Salwar', 'Shop Fabric', 'Fabric: ₹1,100 + Silai: ₹650 = Total ₹1,750', 'ladies_suit')">
+                        <h5>Georgette Embroidered Suit Set</h5>
+                        <p>Colors: Pink, Yellow, Mint Green | Printed & Heavy Work</p>
+                        <p class="price-tag">Kapda: ₹1,100 | Silai: ₹650</p>
+                        <p class="total-tag">Total: ₹1,750</p>
+                    </div>
+                `;
+            } else if (currentType === 'kurta') {
+                container.innerHTML = `
+                    <div class="fabric-card" onclick="finalizeBooking('Cotton Silk Kurta Pajama Set', 'Shop Fabric', 'Fabric: ₹550 + Silai: ₹500 = Total ₹1,050', 'kurta_pajama')">
+                        <h5>Cotton Silk Festive Kurta Pajama</h5>
+                        <p>Colors: White, Off-White, Yellow, Cream</p>
+                        <p class="price-tag">Kapda: ₹550 | Silai: ₹500</p>
+                        <p class="total-tag">Total: ₹1,050</p>
+                    </div>
+                `;
+            } else {
+                container.innerHTML = `
+                    <div class="fabric-card" onclick="finalizeBooking('Kids School Uniform Set', 'Shop Fabric', 'Fabric: ₹450 + Silai: ₹350 = Total ₹800', 'kids_pant_shirt')">
+                        <h5>School Uniform (Shirt & Pant)</h5>
+                        <p>Colors: Navy/White, Grey/White</p>
+                        <p class="price-tag">Kapda: ₹450 | Silai: ₹350</p>
+                        <p class="total-tag">Total: ₹800</p>
+                    </div>
+                `;
+            }
+        }
+
+        function finalizeBooking(outfitName, fabricType, priceDetail, measureType) {
+            document.getElementById('formOutfit').value = outfitName;
+            document.getElementById('formFabricType').value = fabricType;
+            document.getElementById('formPrice').value = priceDetail;
+            
+            let mContainer = document.getElementById('dynamicMeasurementFields');
+            
+            // DYNAMIC FIELD CASES
+            if (measureType === 'pant') {
+                mContainer.innerHTML = `
+                    <div class="form-group row-3">
+                        <div><label>Pant Height (Lambaai):</label><input type="number" step="0.5" placeholder="e.g. 40"></div>
+                        <div><label>Jaang (Thigh):</label><input type="number" step="0.5" placeholder="e.g. 24"></div>
+                        <div><label>Mohari (Bottom):</label><input type="number" step="0.5" placeholder="e.g. 15"></div>
+                    </div>
+                    <div class="form-group row-3">
+                        <div><label>Kamar (Waist):</label><input type="number" step="0.5" placeholder="e.g. 32"></div>
+                        <div><label>Hip:</label><input type="number" step="0.5" placeholder="e.g. 38"></div>
+                    </div>`;
+            } 
+            else if (measureType === 'shirt') {
+                mContainer.innerHTML = `
+                    <div class="form-group row-3">
+                        <div><label>Shirt Height:</label><input type="number" step="0.5" placeholder="e.g. 28"></div>
+                        <div><label>Chest (Cena):</label><input type="number" step="0.5" placeholder="e.g. 38"></div>
+                        <div><label>Shoulder (Teera):</label><input type="number" step="0.5" placeholder="e.g. 17"></div>
+                    </div>
+                    <div class="form-group row-3">
+                        <div><label>Saamna (Front):</label><input type="number" step="0.5" placeholder="e.g. 18"></div>
+                        <div><label>Collar (Gala):</label><input type="number" step="0.5" placeholder="e.g. 15.5"></div>
+                        <div><label>Cuff (Muri) / Aastin:</label><input type="number" step="0.5" placeholder="e.g. 9"></div>
+                    </div>`;
+            } 
+            else if (measureType === 'shirt_and_pant') {
+                mContainer.innerHTML = `
+                    <h4 style="color:#e67e22; margin:8px 0;">1. Shirt Measurement:</h4>
+                    <div class="form-group row-3">
+                        <div><label>Shirt Height:</label><input type="number" step="0.5" placeholder="e.g. 28"></div>
+                        <div><label>Chest:</label><input type="number" step="0.5" placeholder="e.g. 38"></div>
+                        <div><label>Shoulder:</label><input type="number" step="0.5" placeholder="e.g. 17"></div>
+                        <div><label>Saamna:</label><input type="number" step="0.5" placeholder="e.g. 18"></div>
+                        <div><label>Collar:</label><input type="number" step="0.5" placeholder="e.g. 15"></div>
+                        <div><label>Cuff:</label><input type="number" step="0.5" placeholder="e.g. 9"></div>
+                    </div>
+                    <h4 style="color:#e67e22; margin:8px 0;">2. Pant Measurement:</h4>
+                    <div class="form-group row-3">
+                        <div><label>Pant Height:</label><input type="number" step="0.5" placeholder="e.g. 40"></div>
+                        <div><label>Jaang (Thigh):</label><input type="number" step="0.5" placeholder="e.g. 24"></div>
+                        <div><label>Mohari:</label><input type="number" step="0.5" placeholder="e.g. 15"></div>
+                        <div><label>Kamar:</label><input type="number" step="0.5" placeholder="e.g. 32"></div>
+                        <div><label>Hip:</label><input type="number" step="0.5" placeholder="e.g. 38"></div>
+                    </div>`;
+            } 
+            else if (measureType === 'jodhpuri' || measureType === 'blazer_suit') {
+                mContainer.innerHTML = `
+                    <h4 style="color:#e67e22; margin:8px 0;">Coat / Jodhpuri Measurement:</h4>
+                    <div class="form-group row-3">
+                        <div><label>Coat Height:</label><input type="number" step="0.5" placeholder="Coat Height"></div>
+                        <div><label>Chest:</label><input type="number" step="0.5" placeholder="Chest"></div>
+                        <div><label>Shoulder:</label><input type="number" step="0.5" placeholder="Teera"></div>
+                        <div><label>Saamna (Front):</label><input type="number" step="0.5" placeholder="Saamna"></div>
+                        <div><label>Aastin (Sleeve):</label><input type="number" step="0.5" placeholder="Sleeve"></div>
+                        <div><label>Collar / Gala:</label><input type="number" step="0.5" placeholder="Gala"></div>
+                        <div><label>Pocket Height:</label><input type="number" step="0.5" placeholder="Pocket"></div>
+                    </div>
+                    <h4 style="color:#e67e22; margin:8px 0;">Pant & Inner Shirt Measurement:</h4>
+                    <div class="form-group row-3">
+                        <div><label>Pant Height:</label><input type="number" step="0.5" placeholder="Pant Lambaai"></div>
+                        <div><label>Jaang (Thigh):</label><input type="number" step="0.5" placeholder="Thigh"></div>
+                        <div><label>Mohari:</label><input type="number" step="0.5" placeholder="Mohari"></div>
+                        <div><label>Kamar (Waist):</label><input type="number" step="0.5" placeholder="Kamar"></div>
+                        <div><label>Hip:</label><input type="number" step="0.5" placeholder="Hip"></div>
+                    </div>`;
+            } 
+            else if (measureType === 'ladies_suit' || measureType === 'ladies_kurti') {
+                mContainer.innerHTML = `
+                    <h4 style="color:#e67e22; margin:8px 0;">Kurti / Suit Top Measurement:</h4>
+                    <div class="form-group row-3">
+                        <div><label>Kurti Height:</label><input type="number" step="0.5" placeholder="Lambaai"></div>
+                        <div><label>Chest / Bust:</label><input type="number" step="0.5" placeholder="Chest"></div>
+                        <div><label>Pet (Waist):</label><input type="number" step="0.5" placeholder="Waist"></div>
+                        <div><label>Shoulder / Teera:</label><input type="number" step="0.5" placeholder="Shoulder"></div>
+                        <div><label>Aastin Length:</label><input type="number" step="0.5" placeholder="Aastin"></div>
+                        <div><label>Back Neck Depth:</label><input type="number" step="0.5" placeholder="Back Gala"></div>
+                        <div><label>Palla Width (Choradaai):</label><input type="number" step="0.5" placeholder="Palla"></div>
+                    </div>
+                    <h4 style="color:#e67e22; margin:8px 0;">Salwar / Bottom Measurement:</h4>
+                    <div class="form-group row-3">
+                        <div><label>Salwar Height:</label><input type="number" step="0.5" placeholder="Lambaai"></div>
+                        <div><label>Mohari (Bottom):</label><input type="number" step="0.5" placeholder="Mohari"></div>
+                        <div><label>Kamar / Asan:</label><input type="number" step="0.5" placeholder="Asan/Kamar"></div>
+                    </div>`;
+            } 
+            else if (measureType === 'kurta_pajama') {
+                mContainer.innerHTML = `
+                    <h4 style="color:#e67e22; margin:8px 0;">Kurta Measurement:</h4>
+                    <div class="form-group row-3">
+                        <div><label>Kurta Height:</label><input type="number" step="0.5" placeholder="e.g. 40"></div>
+                        <div><label>Chest:</label><input type="number" step="0.5" placeholder="e.g. 38"></div>
+                        <div><label>Shoulder (Teera):</label><input type="number" step="0.5" placeholder="e.g. 17.5"></div>
+                        <div><label>Front Pocket Ht:</label><input type="number" step="0.5" placeholder="Pocket Ht"></div>
+                        <div><label>Side Pocket Ht:</label><input type="number" step="0.5" placeholder="Side Pocket"></div>
+                        <div><label>Taabeej Height:</label><input type="number" step="0.5" placeholder="Taabeej"></div>
+                        <div><label>Collar / Gala:</label><input type="number" step="0.5" placeholder="Collar"></div>
+                        <div><label>Cuff / Aastin:</label><input type="number" step="0.5" placeholder="Cuff"></div>
+                    </div>
+                    <h4 style="color:#e67e22; margin:8px 0;">Pajama Measurement:</h4>
+                    <div class="form-group row-3">
+                        <div><label>Pajama Height:</label><input type="number" step="0.5" placeholder="e.g. 38"></div>
+                        <div><label>Pajama Mohari:</label><input type="number" step="0.5" placeholder="e.g. 14"></div>
+                        <div><label>Kamar (Waist):</label><input type="number" step="0.5" placeholder="e.g. 32"></div>
+                    </div>`;
+            } 
+            else {
+                mContainer.innerHTML = `
+                    <div class="form-group row-3">
+                        <div><label>Height (Lambaai):</label><input type="number" step="0.5" placeholder="Height"></div>
+                        <div><label>Chest / Cena:</label><input type="number" step="0.5" placeholder="Chest"></div>
+                        <div><label>Shoulder / Teera:</label><input type="number" step="0.5" placeholder="Shoulder"></div>
+                        <div><label>Waist / Kamar:</label><input type="number" step="0.5" placeholder="Kamar"></div>
+                    </div>`;
+            }
+
+            document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

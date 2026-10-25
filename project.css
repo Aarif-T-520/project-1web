@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #333333;
+    line-height: 1.5;
+}
+
+.section {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.bg-light {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin: 15px auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 4px;
+}
+
+.section-sub {
+    text-align: center;
+    color: #666666;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* HEADER */
+.header {
+    background-color: #1a252f;
+    color: #ffffff;
+    padding: 12px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h2 {
+    color: #e67e22;
+    font-size: 22px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.nav-links a:hover {
+    color: #e67e22;
+}
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1000&q=80');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero-circle-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #e67e22;
+    margin: 0 auto 10px auto;
+    overflow: hidden;
+}
+
+.hero-circle-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.shop-owner {
+    font-size: 16px;
+    color: #e67e22;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.hero h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: #dddddd;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    background-color: #e67e22;
+    color: #ffffff;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: #d35400;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid #e67e22;
+    color: #e67e22;
+    margin: 5px;
+}
+
+.btn-outline:hover {
+    background-color: #e67e22;
+    color: #ffffff;
+}
+
+.btn-choice {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 12px 20px;
+    margin: 8px;
+    min-width: 220px;
+    text-align: center;
+}
+
+.btn-choice:hover {
+    background-color: #e67e22;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-lg {
+    padding: 12px;
+    font-size: 15px;
+}
+
+/* CATEGORY GRID */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 3fr));
+    gap: 15px;
+}
+
+.cat-card {
+    background: #ffffff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    border: 1px solid #eee;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.cat-card:hover {
+    transform: translateY(-3px);
+    border-color: #e67e22;
+}
+
+.cat-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.cat-card h3 {
+    font-size: 13px;
+    color: #2c3e50;
+    padding: 10px;
+}
+
+/* FLOW & FABRICS */
+.flow-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.flow-options {
+    margin: 15px 0;
+}
+
+.sub-option-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.fabric-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.fabric-card {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: left;
+    transition: transform 0.2s;
+}
+
+.fabric-card:hover {
+    transform: scale(1.02);
+    border-color: #e67e22;
+}
+
+.fabric-card h5 {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.fabric-card p {
+    font-size: 12px;
+    color: #555;
+}
+
+.price-tag {
+    color: #e67e22;
+    font-weight: bold;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.total-tag {
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* 4 TAILORS IN 1 ROW */
+.tailor-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.tailor-card {
+    background: #ffffff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    border: 1px solid #eee;
+    text-align: center;
+}
+
+.tailor-card img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+}
+
+.tailor-body {
+    padding: 8px;
+}
+
+.tailor-body h4 {
+    font-size: 13px;
+    color: #2c3e50;
+}
+
+.tailor-tag {
+    font-size: 11px;
+    color: #e67e22;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .tailor-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* BOOKING FORM */
+.booking-form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.form-subtitle {
+    margin: 15px 0 10px 0;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #e67e22;
+    font-size: 15px;
+    color: #2c3e50;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 3px;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 12px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.row div {
+    flex: 1;
+}
+
+.row-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 10px;
+}
+
+/* HELP & FOOTER */
+.help-box {
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+footer {
+    background-color: #1a252f;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 25px;
+    font-size: 12px;
+}
